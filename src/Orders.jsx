@@ -17,7 +17,7 @@ function Orders() {
               <p className="text-success">Total Amount: ${item.finalPrice.toFixed(2)}</p>
               <ul className="list-group">
                 {item.items.map((product, idx) => (
-                  <li key={idx} className="list-group-item">
+                  <li key={idx} className="list-group-item"><img src={product.image}/>  
                     {product.name} - ${product.price.toFixed(2)} x {product.quantity}
                   </li>
                 ))}

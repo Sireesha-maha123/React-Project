@@ -50,6 +50,7 @@ function Cart() {
           <ul className="list-group mb-3">
             {cartItems.map((item, index) => (
               <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+            <img src={item.image} alt={item.name} className="mb-5 " style={{ maxWidth: "100px", height: "100px"}} /> 
                 {item.name} - ${item.price} - Quantity: {item.quantity}
                 <div>
                   <button className="btn btn-success mx-1" onClick={() => dispatch(increment(item))}>+</button>

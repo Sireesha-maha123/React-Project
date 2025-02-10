@@ -234,7 +234,18 @@ import NotFound from "./NotFound";
 import Milk from "./Milk";
 
 import LefeyVeg from "./LefeyVeg";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faCarrot, 
+  faLeaf, 
+  faDrumstickBite,
+  faCoffee,
+  faCartShopping, 
+  faClipboardList,
+  faUserAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons/faHome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 function App() {
   let cart = useSelector((state) => state.cart);
   let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -248,8 +259,8 @@ function App() {
       <BrowserRouter>
         <nav className="navbar navbar-expand-lg bg-alert-dark">
           <div className="container">
-            <Link to="/home" className="navbar-brand">🛒
-              GroceryApp
+            <Link to="/home" className="navbar-brand"> Fresh Mart....🛒
+              
             </Link>
             <button
               className="navbar-toggler"
@@ -265,31 +276,32 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link to="/home" className="nav-link">Home</Link>
+                  <Link to="/home" className="nav-link"><FontAwesomeIcon icon={faHome} title="Home" />Home</Link>
+                  
                 </li>
                 <li className="nav-item">
-                  <Link to="/veg" className="nav-link"> 🍏Veg</Link>
+                  <Link to="/veg" className="nav-link"> <FontAwesomeIcon icon={faCarrot} title="Carrot" />Veg</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/nonveg" className="nav-link"> 🍗NonVeg</Link>
+                  <Link to="/nonveg" className="nav-link"> <FontAwesomeIcon icon={faDrumstickBite} title="Chicken" />NonVeg</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/milk" className="nav-link"> 🥛Milk</Link>
+                  <Link to="/milk" className="nav-link"><FontAwesomeIcon icon={faCoffee} title="Milk" /> Milk</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/lefyveg" className="nav-link"> LefyVeg</Link>
+                  <Link to="/lefyveg" className="nav-link"><FontAwesomeIcon icon={faLeaf} title="Home" /> LeafyVeg</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/cart" className="nav-link">🛒Cart <span className="badge bg-danger">{totalItems}</span></Link>
+                  <Link to="/cart" className="nav-link"><FontAwesomeIcon icon={faCartShopping} title="Cart" />Cart <span className="badge bg-danger">{totalItems}</span></Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/orders" className="nav-link">Orders</Link>
+                  <Link to="/orders" className="nav-link"><FontAwesomeIcon icon={faClipboardList} title="Orders" />Orders</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/aboutus" className="nav-link">About Us</Link>
+                  <Link to="/aboutus" className="nav-link"><FontAwesomeIcon icon={faUserAlt} title="AboutUs" />About Us</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/contactus" className="nav-link">Contact Us</Link>
+                  <Link to="/contactus" className="nav-link"><FontAwesomeIcon icon={faPhone} title="ContactUs" />Contact Us</Link>
                 </li>
                
               <div className="d-flex align-items-center">
@@ -315,6 +327,7 @@ function App() {
         </nav>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/veg" element={<Veg />} />
           <Route path="/nonveg" element={<NonVeg />} />
           <Route path="/milk" element={<Milk />} />

@@ -1,24 +1,57 @@
-// function Home(){
-//     return(
-//         <>
-//         <h1 style={{color:"blue"}}>This is Home page Home.jsx </h1>
-//         <h2 style={{color:"blue"}}>All the information here</h2>
-//         </>
-//     )
-// }
-// export default Home;
-import "bootstrap/dist/css/bootstrap.min.css";
+
+import { Link } from "react-router-dom";
 
 function Home() {
+  // Category Data
+  const categories = [
+    {
+      name: "🥦 Vegetables",
+      image: "allveg.jpg",
+      link: "/veg",
+      
+    },
+    {
+      name: "🍗 Non-Veg",
+      image: "allnonveg.jpg",
+      link: "/nonveg",
+    
+    },
+    {
+      name: "🥛 Dairy & Milk",
+      image: "milkpro1.jpg",
+      link: "/milk",
+      
+    },
+  ];
+
   return (
-    <div className="container text-center mt-5">
-      <div className="card p-4 shadow-lg">
-        <h1 className="text-primary">Welcome to the Home Page</h1>
-        <h2 className="text-secondary">All the information you need is here</h2>
-        <p className="text-muted">
-          Explore our website to find useful content and resources tailored just for you.
-        </p>
-        <button className="btn btn-primary mt-3">Learn More</button>
+    <div className="container mt-5">
+      {/* Title */}
+      <div className="text-center mb-4">
+        <h1 className="fw-bold text-success">🛒 Welcome to Fresh Mart</h1>
+        <h3 className="text-muted">Fresh & Healthy Food Delivered to You</h3>
+      </div>
+
+      {/* Category Grid */}
+      <div className="row justify-content-center">
+        {categories.map((item, index) => (
+          <div key={index} className="col-lg-4 col-md-6 mb-4">
+            <div className={`card shadow-sm ${item.bgColor} text-white`}>
+              <img
+                src={item.image}
+                className="card-img-top"
+                alt={item.name}
+                style={{ height: "200px", objectFit: "cover" }}
+              />
+              <div className="card-body text-center">
+                <h4 className="card-title fw-bold">{item.name}</h4>
+                <Link to={item.link} className="btn btn-light fw-bold">
+                  Explore ➡️
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
