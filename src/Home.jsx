@@ -5,30 +5,42 @@ function Home() {
   // Category Data
   const categories = [
     {
-      name: "🥦 Vegetables",
+      name: " Vegetables",
       image: "allveg.jpg",
       link: "/veg",
       
     },
     {
-      name: "🍗 Non-Veg",
+      name: " Non-Veg",
       image: "allnonveg.jpg",
       link: "/nonveg",
     
     },
     {
-      name: "🥛 Dairy & Milk",
+      name: "Dairy & Milk",
       image: "milkpro1.jpg",
       link: "/milk",
+      
+    },
+    {
+      name: "Leafy Veg",
+      image: "alllefy.jpg",
+      link: "/lefyVeg",
+      
+    },
+    {
+      name: "Fruits",
+      image: "allfruits.jpg",
+      link: "/fruits",
       
     },
   ];
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 ">
       {/* Title */}
-      <div className="text-center mb-4">
-        <h1 className="fw-bold text-success">🛒 Welcome to Fresh Mart</h1>
+      <div className="text-center ">
+        <h1 className="fw-bold text-success" style={{ width: "90%" }}>🛒 Welcome to Fresh Mart</h1>
         <h3 className="text-muted">Fresh & Healthy Food Delivered to You</h3>
       </div>
 
@@ -36,7 +48,7 @@ function Home() {
       <div className="row justify-content-center">
         {categories.map((item, index) => (
           <div key={index} className="col-lg-4 col-md-6 mb-4">
-            <div className={`card shadow-sm ${item.bgColor} text-white`}>
+            <div className={`card shadow-sm text-white hover-shadow-lg hover-translate ${item.bgColor} text-white`}>
               <img
                 src={item.image}
                 className="card-img-top"

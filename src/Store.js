@@ -63,9 +63,29 @@ const productSlice= createSlice({
              lefyVeg:[
                         {image:"spinach.jpg",name:"Spinach",price:300},,
                         {image:"mint.jpg",name:"Mint",price:400},
-                        {name:"Coriyander",price:300},
-                        {name:"SpringOnion leves",price:500}],
+                        {image:"core.jpg",name:"Coriyander",price:300},
+                        {image:"onionleaves.jpg",name:"SpringOnion leves",price:500},
+                        {image:"onionleaves.jpg",name:" Lettuce",price:500},
+                        {image:"onionleaves.jpg",name:"Swiss Chard",price:500},
+                        {image:"onionleaves.jpg",name:"Collard Greens",price:500},
+                        {image:"onionleaves.jpg",name:"Mustard Greens",price:500}],
 
+            fruits:[
+            {image:"banana.jpg",name:"Banana",price:300},,
+            {image:"apple.jpg",name:"Apple",price:400},
+            {image:"cherry.jpg",name:"Cherry",price:300},
+            {image:"grape.jpg",name:"Grape",price:500},
+            {image:"kiwi.jpg",name:" Kiwi",price:500},
+            {image:"mango.jpg",name:" Mango",price:500},
+            {image:"orange.jpg",name:" Orange",price:500},
+            {image:"papaya.jpg",name:"Papaya",price:500},
+            {image:"pineapple.jpg",name:" Pineapple",price:500},
+            {image:"staw.jpg",name:" Strawberry",price:500},
+            {image:"water.jpg",name:" Watermelon ",price:500},
+            
+            {image:"pom.jpg",name:"Pomegranate ",price:500}
+    
+        ],
         },
         reducers:{},
 });

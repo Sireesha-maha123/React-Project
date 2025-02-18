@@ -1,222 +1,5 @@
-// import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
-// import "./App.css"
-// import "./Navbar.css"
-// import Home from "./Home";
-// import Veg from "./Veg";
-// import NonVeg from "./NonVeg";
-// import Cart from "./Cart";
-// import Orders from "./Orders";
-// import AboutUs from "./AboutUS";
-// import ContactUs from "./ContactUs";
-// import { useDispatch, useSelector } from "react-redux";
-// import Login from "./Login";
-// import { logout } from "./Store";
-// import NotFound from "./NotFound";
-// import Milk from "./Milk";
-
-// function App(){
-//    let cart=useSelector(state => state.cart);
-//    let totalItems=cart.reduce((sum,item) => sum+item.quantity,0); 
-//    let auth=useSelector((state)=>state.auth)
-//    let  isAuthenticated=auth.isAuthenticated;
-//    let user=auth.user;
-//    let dispatch =useDispatch();
-//   return(
-//     <>
-//     <BrowserRouter>
-//     <nav className="navbar">
-//     <Link to='/home' className="linkstyle">Home</Link>
-//     <Link to='/veg'className="linkstyle">Veg</Link>
-//     <Link to='/nonveg' className="linkstyle">NonVeg</Link>
-//     <Link to='/milk'className="linkstyle">Milk</Link>
-//     <Link to='/cart' className="linkstyle">Cart<span>{totalItems}</span></Link>
-//     <Link to='/orders' className="linkstyle">Orders</Link>
-//     <Link to='/aboutus'className="linkstyle">AboutUS</Link>
-//     <Link to='/contactus'className="linkstyle">ContactUs</Link>
-//     <Link to='/notfound'className="linkstyle">NotFound</Link>
-    
-//     {
-//       isAuthenticated? (
-//         <div>
-//         <span className="welcome">welcome,{user}!</span>
-//         <button onClick={ ()=> dispatch(logout())}
-//         className="logout-btn">logOut</button>
-//         </div>
-//       ):
-//       (
-//         <Link to='/login'className="linkstyle">SignIN</Link>
-//       )
-//     }
-//    </nav>
-//       <Routes>
-//       <Route path="/home" element={<Home/>}/>
-//       <Route path="/veg" element={<Veg/>}/>
-//       <Route path="/nonveg" element={<NonVeg/>}/>
-//       <Route path="/milk"element={<Milk/>}/>
-      
-//       <Route path="/cart" element={<Cart/>}/>
-//       <Route path="/orders" element={<Orders/>}/>
-//       <Route path="/aboutus" element={<AboutUs/>}/>
-//       <Route path="/contactus" element={<ContactUs/>}/>
-//       <Route path="/login" element={<Login/>}/>
-//       <Route path="*" element={<NotFound/>}/>
-
-//     </Routes>
-//     </BrowserRouter>
-    
-    
-//     </>
-//   )
-// }
-// export default App;
-
-// import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-
-// import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
-
-// import Home from "./Home";
-
-// import Veg from "./Veg";
-
-// import NonVeg from "./NonVeg";
-
-// import Cart from "./Cart";
-
-// import Orders from "./Orders";
-
-// import AboutUs from "./AboutUS";
-
-// import ContactUs from "./ContactUs";
-
-// import { useDispatch, useSelector } from "react-redux";
-
-// import Login from "./Login";
-
-// import { logout } from "./Store";
-
-// import NotFound from "./NotFound";
-
-// import Milk from "./Milk";
-
-
-
-// function App() {
-
-//   let cart = useSelector((state) => state.cart);
-
-//   let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-
-//   let auth = useSelector((state) => state.auth);
-
-//   let isAuthenticated = auth.isAuthenticated;
-
-//   let user = auth.user;
-
-//   let dispatch = useDispatch();
-
-
-
-//   return (
-
-//     <BrowserRouter>
-
-//       <nav className="navbar navbar-align-lg navbar- bg-bold primary px-4 fixed-top d-flex align-items-center">
-
-//         <Link to="/home" className="navbar-brand fw-bold">🛒 MyShop</Link>
-
-//         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-
-//           <span className="navbar-toggler-icon"></span>
-
-//         </button>
-
-//         <div className="collapse navbar-collapse" id="navbarNav">
-
-//           <ul className="navbar-nav ms-auto">
-
-//             <li className="nav-item"><Link to="/home" className="nav-link">Home</Link></li>
-
-//             <li className="nav-item"><Link to="/veg" className="nav-link">Veg</Link></li>
-
-//             <li className="nav-item"><Link to="/nonveg" className="nav-link">NonVeg</Link></li>
-
-//             <li className="nav-item"><Link to="/milk" className="nav-link">Milk</Link></li>
-
-//             <li className="nav-item">
-
-//               <Link to="/cart" className="nav-link">Cart <span className="badge bg-warning">{totalItems}</span></Link>
-
-//             </li>
-
-//             <li className="nav-item"><Link to="/orders" className="nav-link">Orders</Link></li>
-
-//             <li className="nav-item"><Link to="/aboutus" className="nav-link">About Us</Link></li>
-
-//             <li className="nav-item"><Link to="/contactus" className="nav-link">Contact Us</Link></li>
-
-//           </ul>
-
-//         </div>
-
-//         {isAuthenticated ? (
-
-//           <div className="d-flex align-items-center">
-
-//             <span className="text-white me-3 fw-bold">👋 Welcome, {user}!</span>
-
-//             <button className="btn btn-danger" onClick={() => dispatch(logout())}>Logout</button>
-
-//           </div>
-
-//         ) : (
-
-//           <Link to="/login" className="btn btn-light">Sign In</Link>
-
-//         )}
-
-//       </nav>
-
-
-
-//       <div className="container mt-4">
-
-//         <Routes>
-
-//           <Route path="/home" element={<Home />} />
-
-//           <Route path="/veg" element={<Veg />} />
-
-//           <Route path="/nonveg" element={<NonVeg />} />
-
-//           <Route path="/milk" element={<Milk />} />
-
-//           <Route path="/cart" element={<Cart />} />
-
-//           <Route path="/orders" element={<Orders />} />
-
-//           <Route path="/aboutus" element={<AboutUs />} />
-
-//           <Route path="/contactus" element={<ContactUs />} />
-
-//           <Route path="/login" element={<Login />} />
-
-//           <Route path="*" element={<NotFound />} />
-
-//         </Routes>
-
-//       </div>
-
-//     </BrowserRouter>
-
-//   );
-
-// }
-
-
-
-// export default App;
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./Navbar.css";
@@ -246,6 +29,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons/faHome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
+import Fruits from "./Fruits";
+import { faAppleAlt } from "@fortawesome/free-solid-svg-icons/faAppleAlt";
 function App() {
   let cart = useSelector((state) => state.cart);
   let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -289,7 +74,10 @@ function App() {
                   <Link to="/milk" className="nav-link"><FontAwesomeIcon icon={faCoffee} title="Milk" /> Milk</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/lefyveg" className="nav-link"><FontAwesomeIcon icon={faLeaf} title="Home" /> LeafyVeg</Link>
+                  <Link to="/lefyveg" className="nav-link"><FontAwesomeIcon icon={faLeaf} title="lefyVeg" /> LeafyVeg</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/fruits" className="nav-link"><FontAwesomeIcon icon={faAppleAlt} title="Home" /> Fruits</Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/cart" className="nav-link"><FontAwesomeIcon icon={faCartShopping} title="Cart" />Cart <span className="badge bg-danger">{totalItems}</span></Link>
@@ -316,6 +104,7 @@ function App() {
                     </button>
                   </div>
                 ) : (
+                  
                   <Link className="btn btn-outline-light btn-sm" to="/login">
                     Sign In
                   </Link>
@@ -326,6 +115,7 @@ function App() {
           </div>
         </nav>
         <Routes>
+
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/veg" element={<Veg />} />
@@ -334,6 +124,7 @@ function App() {
           <Route path="/lefyveg" element={<LefeyVeg/>} />
 
           <Route path="/cart" element={<Cart />} />
+          <Route path="/fruits"element={<Fruits/>}/>
           <Route path="/orders" element={<Orders />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />
