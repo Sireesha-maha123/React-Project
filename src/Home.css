@@ -1,0 +1,41 @@
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Card Styling */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Image Styling */
+  .card img {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Image Zoom on Hover */
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Button Styling */
+  .btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Button Hover */
+  .btn:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  
