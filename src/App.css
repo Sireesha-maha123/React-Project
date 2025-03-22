@@ -18,3 +18,13 @@
   margin:10px;
   background-color:darkorange;
 }
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-item {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
