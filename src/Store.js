@@ -68,7 +68,10 @@ const productSlice= createSlice({
                         {image:"lattec.jpg",name:" Lettuce",price:60},
                         {image:"swiss.jpg",name:"Swiss Chard",price:30},
                         {image:"collared.jpg",name:"Collard Greens",price:40},
-                        {image:"mustord.jpg",name:"Mustard Greens",price:60}],
+                        {image:"mustord.jpg",name:"Mustard Greens",price:60},
+                        {image:"aru.jpg",name:"Arugula",price:40},
+                        {image:"aru.jpg",name:"Arugula",price:40},
+                        {image:"aru.jpg",name:"Arugula",price:40}],
 
             fruits:[
             {image:"banana.jpg",name:"Banana",price:80},,
