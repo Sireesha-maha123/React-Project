@@ -58,7 +58,7 @@ function Login() {
         <h2 className="text-center text-primary">🔐 Login</h2>
         <div className="mb-3">
           <label className="form-label">Username</label>
-          <input type="text" ref={username} className="form-control" placeholder="Enter your username" />
+          <input type="text" ref={username} className="form-control" placeholder="Enter username Sireesha" />
         </div>
         <div className="mb-3">
           <label className="form-label">Password</label>
